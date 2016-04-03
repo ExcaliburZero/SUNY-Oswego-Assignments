@@ -1,0 +1,108 @@
+----------------------------------------
+----------------------------------------
+Input:
+~~~~~~~~
+1 true TESTING
+
+Result:
+~~~~~~~~
+Integer: 1
+Boolean: true
+String:  TESTING
+----------------------------------------
+----------------------------------------
+Input:
+~~~~~~~~
+twelve true TESTING
+
+Result:
+~~~~~~~~
+java.util.InputMismatchException
+
+Reason:
+~~~~~~~~
+The integer is entered as a word rather than as a number.
+----------------------------------------
+----------------------------------------
+Input:
+~~~~~~~~
+1.2 true TESTING
+
+Result:
+~~~~~~~~
+java.util.InputMismatchException
+
+Reason:
+~~~~~~~~
+The token that was expected to be an integer actually was a double/float.
+----------------------------------------
+----------------------------------------
+Input:
+~~~~~~~~
+123 True TESTING
+
+Result:
+~~~~~~~~
+Integer: 123
+Boolean: true
+String:  TESTING
+----------------------------------------
+----------------------------------------
+Input:
+~~~~~~~~
+123 True TESTING
+
+Result:
+~~~~~~~~
+Integer: 123
+Boolean: true
+String:  TESTING
+----------------------------------------
+----------------------------------------
+Input:
+~~~~~~~~
+123 FALSE TESTING
+
+Result:
+~~~~~~~~
+Integer: 123
+Boolean: false
+String:  TESTING
+----------------------------------------
+----------------------------------------
+Input:
+~~~~~~~~
+123 zero TESTING
+
+Result:
+~~~~~~~~
+Integer: 123
+java.util.InputMismatchException
+
+Reason:
+~~~~~~~~
+The token that was expected to be a boolean was actually a string.
+----------------------------------------
+----------------------------------------
+Input:
+~~~~~~~~
+123 true 345
+
+Result:
+~~~~~~~~
+Integer: 123
+Boolean: true
+String:  345
+----------------------------------------
+----------------------------------------
+Input:
+~~~~~~~~
+123 true 345.67
+
+Result:
+~~~~~~~~
+Integer: 123
+Boolean: true
+String:  345.67
+----------------------------------------
+----------------------------------------
